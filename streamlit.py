@@ -43,7 +43,7 @@ if pageno=="Pipeline Based(Huggingface)":
             st.write("<DEBUGGING PURPOSES>Text input: ",textinp)
             with st.spinner(text="In progress..."):
                 
-                print(generateText(story_start_with,story_length,genre,page))
+                st.write(generateText(story_start_with,story_length,genre,page))
                 # input=tokenizer(textinp, add_special_tokens=False, return_tensors="pt")["input_ids"]
                 # prompt_length = len(tokenizer.decode(input[0]))
                 # outputs = model.generate(input, max_length=story_length, do_sample=True, top_p=0.95, top_k=60)
