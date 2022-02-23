@@ -1,0 +1,8 @@
+transformers @ git+https://github.com/huggingface/transformers.git@280a811ecb7d2f63e7e83e0b05fb411b63e30ddc
+Flask==0.12.2
+flask-ngrok==0.0.25
+itsdangerous==2.0.1
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.8.0+cpu
+
+

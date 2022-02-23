@@ -1,0 +1,54 @@
+
+/* https://stackoverflow.com/questions/8304436/css-styling-text-areas-like-notebook-look */
+
+textarea
+{
+    border: 1px solid #EEEEEE;
+    box-shadow: 1px 1px 0 #DDDDDD;
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    color:#e80202; 
+    font-size: 22px;
+    line-height: 50px;
+    margin: 2% auto;
+    padding: 11px 20px 0 70px;
+    resize: none;
+    height: 500px;
+    width: 75%;
+    
+    background-image: -moz-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0px), -moz-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -moz-radial-gradient(3.9% 46% , circle closest-corner, #CCCCCC, #CCCCCC 43.5%, transparent 0%); 
+    background-image: -webkit-linear-gradient(top , transparent, transparent 49px,#E7EFF8 0), -webkit-radial-gradient(4% 50%, circle closest-corner, #f5f5f5, #f5f5f5 39%, transparent 0%), -webkit-radial-gradient(3.9% 46%, circle closest-corner, #cccccc, #cccccc 43.5%, transparent 0%);
+    
+    -webkit-background-size:  100% 50px;
+    background-size: 100% 50px;
+    overflow: auto;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.wrapper { display: inline-block; }
+
+h1 {
+  border-right: 4px solid #fff;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 
+    typing 2s steps(24, end),
+    blink 1s step-end infinite;
+}
+
+/* for sharing bttons */
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}

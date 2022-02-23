@@ -1,0 +1,83 @@
+
+/* ---------------------------------------------- 
+       Glitchy Text Idea Borrowed From
+       https://codepen.io/akadart/pen/VvmNYr
+   ----------------------------------------------- */
+
+#glitch-granny-text-container{
+    height:70px;
+}
+
+.text, .glitch {
+  -webkit-filter: url("#glitch");
+  filter: url("#glitch");
+}
+
+.text {
+  display: inline-block;
+}
+
+.glitch {
+  font-size: 50px;
+  position: absolute;
+  width: 100%;
+  width: 370px;
+  font-family: sans-serif;
+  margin: auto;
+  display: inline-block;
+}
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(6px, 999px, 87px, 0);
+  }
+  33.33333% {
+    clip: rect(92px, 999px, 98px, 0);
+  }
+  66.66667% {
+    clip: rect(101px, 999px, 182px, 0);
+  }
+  100% {
+    clip: rect(137px, 999px, 72px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 5px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: black;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 300px, 0, 0);
+  font-family: Bodoni, serif;
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(1459px, 9999px, 542px, 0);
+  }
+  33.33333% {
+    clip: rect(1953px, 9999px, 292px, 0);
+  }
+  66.66667% {
+    clip: rect(1401px, 9999px, 237px, 0);
+  }
+  100% {
+    clip: rect(1698px, 9999px, 1938px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -5px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: black;
+  background: 0;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
